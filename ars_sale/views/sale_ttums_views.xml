@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="sale_ttums_view_form" model="ir.ui.view">
+        <field name="name">sale.ttums.form</field>
+        <field name="model">sale.ttums</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="confirm_ttums" states="draft" class="btn-primary" type="object" string="Confirm TTUMS"/>
+                    <button name="create_so" states="confirmed" class="btn-primary" type="object" string="Create SO"/>
+                    <button name="cancel_ttums" states="confirmed" type="object" string="Cancel TTUMS"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="partner_id" />
+                        </group>
+                        <group>
+                            <field name="date_ttums" />
+                            <field name="sale_order_id" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="TTUMS Lines" name="ttums_lines">
+                            <field name="ttums_line_ids">
+                                <tree editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="price"/>
+                                    <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_ttums_tree_form" model="ir.ui.view">
+        <field name="name">sale.ttums.tree</field>
+        <field name="model">sale.ttums</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="date_ttums" />
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_sale_ttums" model="ir.actions.act_window">
+        <field name="name">Action TTUMS</field>
+        <field name="res_model">sale.ttums</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                There is no TTUMS
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_sale_ttums" name="TTUMS"
+        action="action_sale_ttums"
+        parent="sale.sale_menu_root" sequence="1"/>
+    </data>
+</odoo>
