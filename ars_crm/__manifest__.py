@@ -12,10 +12,10 @@
 Sale FOR ARISTA GROUP    ****
 ======================== ****
         """,
-    'depends': ['sale'],
+    'depends': ['crm'],
     'data': [
-        'security/ir.model.access.csv',
-        'views/sale_ttums_views.xml',
+        #'security/ir.model.access.csv',
+        #'views/sale_ttums_views.xml',
         # 'views/hr_skill_views.xml'
         ],
     'demo': [],
