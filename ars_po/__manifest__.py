@@ -2,18 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Purchase',
+    'name': 'Inherit Purchase',
     'version': '1.2',
-    'category': 'Operations/Purchase',
-    'sequence': 60,
     'summary': 'Purchase orders, tenders and agreements',
     'description': "",
-    'website': 'https://www.odoo.com/page/purchase',
-    'depends': ['account'],
-    'data': [
-    ],
-    'demo': [
-    ],
+    'depends': ['purchase'],
+    'data': ['views/po_views.xml'],
+    'demo': [],
     'installable': True,
     'auto_install': False,
     'application': True,

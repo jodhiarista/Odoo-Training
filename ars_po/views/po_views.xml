@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="_view_form" model="ir.ui.view"> <!--record id bebas, inherit-->
+        <field name="name">purchase.order.view.form.arista</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/> <!-- ref untuk reference view yang diinherit -->
+        <!-- <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="catatan"/>
+            </field>
+        </field> -->
+    </record>
+</odoo>
