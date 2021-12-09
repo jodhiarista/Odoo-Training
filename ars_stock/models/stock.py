@@ -7,4 +7,6 @@ class SaleTTUMS(models.Model):
     _name = "sale.ttums"
 
     name = fields.Char("catatan", required=True)
+    
+    
 
