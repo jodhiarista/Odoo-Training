@@ -8,4 +8,4 @@ from odoo.exceptions import ValidationError
 class Department(models.Model):
     _inherit = 'hr.department'
 
-    catatan = fields.Char(string='Catatan')
+    catatan = fields.Char(string='Lalala')
