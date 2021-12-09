@@ -13,7 +13,7 @@ Sale FOR ARISTA GROUP    ****
 ======================== ****
         """,
     'depends': ['crm'],
-    'data': [],
+    'data': ['views/catatan.xml'],
     'demo': [],
     'qweb': [],
     'installable': True,
