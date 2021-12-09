@@ -6,5 +6,5 @@ from odoo import fields, models
 class SaleTTUMS(models.Model):
     _name = "sale.ttums"
 
-    name = fields.Char("catatan")
+    name = fields.Char("catatan", required=True)
 
